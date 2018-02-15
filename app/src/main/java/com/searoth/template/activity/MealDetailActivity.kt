@@ -1,4 +1,4 @@
-package com.searoth.savorlyapp.activity
+package com.searoth.template.activity
 
 import android.graphics.Color
 import android.os.Build
@@ -6,11 +6,10 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.WindowManager
-import com.searoth.savorlyapp.adapter.CustomViewHolder
-import com.searoth.savorlyapp.R
+import com.searoth.template.adapter.CustomViewHolder
+import com.searoth.template.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_meal_detail.*
-import java.util.*
 
 class MealDetailActivity : AppCompatActivity() {
 

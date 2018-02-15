@@ -1,4 +1,4 @@
-package com.searoth.savorlyapp.other
+package com.searoth.template.other
 
 /**
  * Created by SeaRoth_2 on 2/14/2018.

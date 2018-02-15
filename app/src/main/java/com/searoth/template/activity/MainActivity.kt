@@ -1,4 +1,4 @@
-package com.searoth.savorlyapp.activity
+package com.searoth.template.activity
 
 import android.net.Uri
 import android.os.Bundle
@@ -10,16 +10,14 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.google.gson.GsonBuilder
-import com.searoth.savorlyapp.R
-import com.searoth.savorlyapp.adapter.LocalFoodAdapter
-import com.searoth.savorlyapp.fragment.HomeFragment
-import com.searoth.savorlyapp.fragment.SecondFragment
-import com.searoth.savorlyapp.fragment.ThirdFragment
-import com.searoth.savorlyapp.other.Models
-import com.searoth.savorlyapp.other.MyToast
+import com.searoth.template.R
+import com.searoth.template.fragment.HomeFragment
+import com.searoth.template.fragment.SecondFragment
+import com.searoth.template.fragment.ThirdFragment
+import com.searoth.template.other.Models
+import com.searoth.template.other.MyToast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
 import okhttp3.*
 import java.io.IOException
 

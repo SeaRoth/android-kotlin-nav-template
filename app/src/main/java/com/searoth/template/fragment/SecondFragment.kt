@@ -1,4 +1,4 @@
-package com.searoth.savorlyapp.fragment
+package com.searoth.template.fragment
 
 import android.content.Context
 import android.net.Uri
@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.searoth.savorlyapp.R
+import com.searoth.template.R
 
 /**
  * A simple [Fragment] subclass.

@@ -1,4 +1,4 @@
-package com.searoth.savorlyapp.other;
+package com.searoth.template.other;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.searoth.savorlyapp.R;
+import com.searoth.template.R;
 
 
 /**

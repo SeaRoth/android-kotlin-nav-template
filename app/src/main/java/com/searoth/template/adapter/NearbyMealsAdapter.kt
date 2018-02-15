@@ -1,13 +1,13 @@
-package com.searoth.savorlyapp.adapter
+package com.searoth.template.adapter
 
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.searoth.savorlyapp.R
-import com.searoth.savorlyapp.activity.MealDetailActivity
-import com.searoth.savorlyapp.other.Models
+import com.searoth.template.R
+import com.searoth.template.activity.MealDetailActivity
+import com.searoth.template.other.Models
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_food.view.*
 

@@ -1,4 +1,4 @@
-package com.searoth.savorlyapp
+package com.searoth.template
 
 import org.junit.Test
 
