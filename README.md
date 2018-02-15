@@ -4,9 +4,23 @@ Use this project as a template for your next Android Kotlin app.
 
 I built this app to practice Kotlin and to try and emulate an iOS app for a company I applied to in February 2018.
 
+### What it does:
+ 1. OkHttp web request for [JSON](http://www.gamermessenger.com/savorlyapp/food_feed.json)
+ 2. Create custom objects using google-gson
+ 3. Use Picasso to load images from URL located inside JSON
+ 4. Use CircleImageView to make some images look nice
+ 5. List meals using a RecyclerView
+ 6. Send meal data to "Meal Detail Activity" using intents
+
 ## Getting Started
 
 Download the project and then open it using the latest version of Android Studio.
+
+![1](https://i.imgur.com/0oLjfhW.png)
+
+![2](https://i.imgur.com/JytkjdS.png)
+
+![3](https://i.imgur.com/genYlEQ.png)
 
 ### Prerequisites
 
