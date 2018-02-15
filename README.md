@@ -29,7 +29,7 @@ It should run if you press the run button in Android Studio after gradle finishe
 * [OkHttp](https://github.com/square/okhttp) - Web requests made easy
 * [gson](https://github.com/google/gson) - Object creation made easy
 * [Picasso](https://github.com/square/picasso) - Image settings made easy
-* [Circle Image View] (https://github.com/hdodenhof/CircleImageView) - Image manipulation made easy
+* [Circle Image View](https://github.com/hdodenhof/CircleImageView) - Image manipulation made easy
 
 ## Contributing
 
