@@ -4,6 +4,8 @@ Use this project as a template for your next Android Kotlin app.
 
 I built this app to practice Kotlin and to try and emulate an iOS app for a company I applied to in February 2018.
 
+[Google Play Link](https://play.google.com/store/apps/details?id=com.searoth.savorlyapp)
+
 ### What it does:
  1. OkHttp web request for [JSON](http://www.gamermessenger.com/savorlyapp/food_feed.json)
  2. Create custom objects using google-gson
