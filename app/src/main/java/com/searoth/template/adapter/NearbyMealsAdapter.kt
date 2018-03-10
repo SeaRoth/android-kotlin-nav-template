@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.searoth.template.R
-import com.searoth.template.activity.MealDetailActivity
+import com.searoth.template.view.mealdetails.activity.MealDetailActivity
 import com.searoth.template.model.*
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_food.view.*

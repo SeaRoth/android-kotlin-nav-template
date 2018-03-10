@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.searoth.template.activity.MealDetailActivity"
+        <activity android:name="com.searoth.template.view.mealdetails.activity.MealDetailActivity"
             android:label="Meal Detail"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">

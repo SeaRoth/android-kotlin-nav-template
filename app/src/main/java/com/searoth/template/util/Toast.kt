@@ -1,50 +1,66 @@
 package com.searoth.template.util
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import com.searoth.template.R
 
 
 /**
- * Created by SeaRoth_2 on 9/8/2017.
+ * Created by Yusuf on 10/3/2018.
  */
 
-class Toast(var currentToast: Toast? = null) {
+class Toast {
 
-    fun showShort(context: Context, message: String) {
-        if (currentToast != null) currentToast!!.cancel()
-        val inflater = (context as Activity).layoutInflater
-        val layout = inflater.inflate(R.layout.custom_toast, context.findViewById<View>(R.id.root) as ViewGroup)
-        val text = layout.findViewById<View>(R.id.message) as TextView
-        val toast = Toast(context)
+    companion object {
 
-        text.text = message
+        private var currentToast: Toast? = null
 
-        toast.duration = Toast.LENGTH_SHORT
+        private fun initText(toast: Toast, layout: View, message: String, toastLength: Int) {
 
-        toast.view = layout
-        toast.show()
-        currentToast = toast
-    }
+            val text = layout.findViewById<View>(R.id.message) as TextView
 
-    fun showLong(context: Context, message: String) {
-        if (currentToast != null) currentToast!!.cancel()
-        val inflater = (context as Activity).layoutInflater
-        val layout = inflater.inflate(R.layout.custom_toast, context.findViewById<View>(R.id.root) as ViewGroup)
-        val text = layout.findViewById<View>(R.id.message) as TextView
+            toast.duration = toastLength
 
-        text.text = message
+            text.text = message
 
-        val toast = Toast(context)
+            toast.view = layout
 
-        toast.duration = Toast.LENGTH_LONG
+            toast.show()
 
-        toast.view = layout
-        toast.show()
-        currentToast = toast
+            currentToast = toast
+        }
+
+        @SuppressLint("InflateParams")
+        fun showShort(context: Context, message: String) {
+            if (currentToast != null) currentToast!!.cancel()
+
+            val inflater = (context as Activity).layoutInflater
+            val layout = inflater.inflate(R.layout.custom_toast, null)
+            val toast = Toast(context)
+
+            initText(toast, layout, message, Toast.LENGTH_SHORT)
+
+            toast.duration = Toast.LENGTH_SHORT
+
+        }
+
+        @SuppressLint("InflateParams")
+        fun showLong(context: Context, message: String) {
+            if (currentToast != null) currentToast!!.cancel()
+
+            val inflater: LayoutInflater = (context as Activity).layoutInflater
+
+            val layout = inflater.inflate(R.layout.custom_toast, null)
+
+            val toast = Toast(context)
+
+            initText(toast, layout, message, Toast.LENGTH_LONG)
+
+        }
     }
 }

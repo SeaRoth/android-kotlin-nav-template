@@ -1,4 +1,4 @@
-package com.searoth.template.activity
+package com.searoth.template.view.mealdetails.activity
 
 import android.graphics.Color
 import android.os.Build

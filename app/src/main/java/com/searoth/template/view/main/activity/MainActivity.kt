@@ -12,13 +12,13 @@ import android.view.Menu
 import android.view.MenuItem
 import com.searoth.template.R
 import com.searoth.template.databinding.ActivityMainBinding
-import com.searoth.template.fragment.HomeFragment
-import com.searoth.template.fragment.SecondFragment
-import com.searoth.template.fragment.ThirdFragment
 import com.searoth.template.model.LocalFeed
-import com.searoth.template.util.MyToast
+import com.searoth.template.util.Toast
 import com.searoth.template.viewmodel.main.activity.MainActivityViewModel
 import com.searoth.template.viewmodel.main.activity.OnSuccess
+import com.searoth.template.viewmodel.main.fragment.HomeFragment
+import com.searoth.template.viewmodel.main.fragment.SecondFragment
+import com.searoth.template.viewmodel.main.fragment.ThirdFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -121,15 +121,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_manage -> {
                 title = "manage"
-                MyToast.showLong(this, "Fragment not setup")
+                Toast.showLong(this, "Fragment not setup")
             }
             R.id.nav_share -> {
                 title = "share"
-                MyToast.showLong(this, "Fragment not setup")
+                Toast.showLong(this, "Fragment not setup")
             }
             R.id.nav_send -> {
                 title = "send"
-                MyToast.showLong(this, "Fragment not setup")
+                Toast.showLong(this, "Fragment not setup")
             }
         }
         loadFragment(id)
