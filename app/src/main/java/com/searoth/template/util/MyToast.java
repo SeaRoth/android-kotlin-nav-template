@@ -1,4 +1,4 @@
-package com.searoth.template.other;
+package com.searoth.template.util;
 
 import android.app.Activity;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.searoth.template.fragment
+package com.searoth.template.view.main.fragment
 
 import android.content.Context
 import android.net.Uri
@@ -13,12 +13,12 @@ import com.searoth.template.R
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [ThirdFragment.OnFragmentInteractionListener] interface
+ * [SecondFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [ThirdFragment.newInstance] factory method to
+ * Use the [SecondFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ThirdFragment : Fragment() {
+class SecondFragment : Fragment() {
 
     // TODO: Rename and change types of parameters
     private var mParam1: String? = null
@@ -37,7 +37,7 @@ class ThirdFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater!!.inflate(R.layout.fragment_third, container, false)
+        return inflater!!.inflate(R.layout.fragment_second, container, false)
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -87,11 +87,11 @@ class ThirdFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment ThirdFragment.
+         * @return A new instance of fragment SecondFragment.
          */
         // TODO: Rename and change types and number of parameters
-        fun newInstance(param1: String, param2: String): ThirdFragment {
-            val fragment = ThirdFragment()
+        fun newInstance(param1: String, param2: String): SecondFragment {
+            val fragment = SecondFragment()
             val args = Bundle()
             args.putString(ARG_PARAM1, param1)
             args.putString(ARG_PARAM2, param2)
