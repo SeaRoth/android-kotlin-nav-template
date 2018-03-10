@@ -25,7 +25,7 @@
             android:adjustViewBounds="false"
             android:cropToPadding="false"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/chicken_itza"></ImageView>
+            app:srcCompat="@drawable/chicken_itza"/>
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/be"

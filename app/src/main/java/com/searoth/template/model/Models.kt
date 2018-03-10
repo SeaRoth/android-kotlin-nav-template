@@ -1,4 +1,4 @@
-package com.searoth.template.other
+package com.searoth.template.model
 
 /**
  * Created by SeaRoth_2 on 2/14/2018.
@@ -29,15 +29,13 @@ package com.searoth.template.other
 //    "hours": "",
 //    "rating": 4
 //}
-class Models{
 
-    class User(val id: Int, val name: String, val email: String, val imageUrl: String, val username: String)
+data class User(val id: Int, val name: String, val email: String, val imageUrl: String, val username: String)
 
-    class LocalFeed(var user: User, val meals: List<FoodItem>)
+data class LocalFeed(var user: User, val meals: List<FoodItem>)
 
-    class FoodItem(val id: Int, val name: String, val imageUrl: String,
-                   val rating: Float, val price: Double, var description: String,
-                   var notes: String, val ingredients: Array<String>,val business: Business)
+data class FoodItem(val id: Int, val name: String, val imageUrl: String,
+                    val rating: Float, val price: Double, var description: String,
+                    var notes: String, val ingredients: Array<String>, val business: Business)
 
-    class Business(val name: String, val link: String, val imageUrl: String, val address: String, val hours: String, val rating: Float)
-}
+data class Business(val name: String, val link: String, val imageUrl: String, val address: String, val hours: String, val rating: Float)

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.searoth.template.activity.MainActivity"
+            android:name="com.searoth.template.view.main.activity.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
@@ -29,7 +29,7 @@
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.searoth.template.activity.MainActivity" />
+                android:value="com.searoth.template.view.main.activity.MainActivity" />
         </activity>
 
 

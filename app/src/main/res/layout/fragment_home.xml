@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.searoth.template.activity.MainActivity"
+        tools:context="com.searoth.template.view.main.activity.MainActivity"
         tools:showIn="@layout/app_bar_main">
 
 

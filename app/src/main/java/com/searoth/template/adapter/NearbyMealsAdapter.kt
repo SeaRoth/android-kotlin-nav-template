@@ -7,14 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.searoth.template.R
 import com.searoth.template.activity.MealDetailActivity
-import com.searoth.template.other.Models
+import com.searoth.template.model.*
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_food.view.*
 
 /**
  * Created by SeaRoth_2 on 2/14/2018.
  */
-class LocalFoodAdapter(val localFeed: Models.LocalFeed): RecyclerView.Adapter<CustomViewHolder>(){
+class LocalFoodAdapter(val localFeed: LocalFeed): RecyclerView.Adapter<CustomViewHolder>(){
 
     override fun onBindViewHolder(holder: CustomViewHolder?, position: Int) {
         val meal = localFeed.meals.get(position)
@@ -41,7 +41,7 @@ class LocalFoodAdapter(val localFeed: Models.LocalFeed): RecyclerView.Adapter<Cu
     }
 }
 
-class CustomViewHolder(val view: View, var foodItem: Models.FoodItem? = null): RecyclerView.ViewHolder(view) {
+class CustomViewHolder(val view: View, var foodItem: FoodItem? = null): RecyclerView.ViewHolder(view) {
 
     companion object {
         val MEAL_ID_KEY = "MEAL_ID_KEY"

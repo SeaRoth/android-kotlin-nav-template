@@ -12,10 +12,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.searoth.template.other.Models
+import com.searoth.template.model.*
 import com.searoth.template.R
-import com.searoth.template.activity.MainActivity
+import com.searoth.template.view.main.activity.MainActivity
 import com.searoth.template.adapter.LocalFoodAdapter
+import com.searoth.template.model.LocalFeed
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -29,7 +30,7 @@ class HomeFragment : Fragment(){
     private var mInflater: View? = null
     private var mListener: OnFragmentInteractionListener? = null
     private var mainActivity: MainActivity? = null
-    var localFeed: Models.LocalFeed? = null
+    var localFeed: LocalFeed? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +43,7 @@ class HomeFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         mInflater = inflater!!.inflate(R.layout.fragment_home, container, false)
-        mInflater?.rv_main?.layoutManager = LinearLayoutManager(activity) as RecyclerView.LayoutManager?
+        mInflater?.rv_main?.layoutManager = LinearLayoutManager(activity)
 
         //get the LocalFeed public var
         mainActivity = activity as MainActivity?
@@ -60,7 +61,7 @@ class HomeFragment : Fragment(){
         return mInflater
     }
 
-    private fun setNavigationUI(user: Models.User){
+    private fun setNavigationUI(user: User){
         println("we are here " + user.name)
         val navigationView = activity.findViewById<View>(R.id.nav_view) as NavigationView
         val headerView = navigationView.getHeaderView(0)
