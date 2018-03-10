@@ -33,10 +33,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     var localFeed: LocalFeed? = null
 
-    override fun onFragmentInteraction(uri: Uri) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setSupportActionBar(toolbar)
@@ -51,11 +47,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
-    override fun onSuccessLoad(list: LocalFeed) {
-        localFeed = list
-        fragmentTransaction(HomeFragment())
-    }
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main, menu)
         return true
@@ -68,12 +59,51 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        when (item.itemId) {
+            R.id.nav_home -> {
+                title = "Home"
+            }
+            R.id.nav_gallery -> {
+                title = "gallery"
+            }
+            R.id.nav_slideshow -> {
+                title = "slideshow"
+            }
+            R.id.nav_manage -> {
+                title = "manage"
+                Toast.showLong(this, "Fragment not setup")
+            }
+            R.id.nav_share -> {
+                title = "share"
+                Toast.showLong(this, "Fragment not setup")
+            }
+            R.id.nav_send -> {
+                title = "send"
+                Toast.showLong(this, "Fragment not setup")
+            }
+        }
+        loadFragment(id)
+        drawer_layout.closeDrawer(GravityCompat.START)
+        return true
+    }
+
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }
+    }
+
+    override fun onSuccessLoad(list: LocalFeed) {
+        localFeed = list
+        fragmentTransaction(HomeFragment())
+    }
+
+    override fun onFragmentInteraction(uri: Uri) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     private fun setUpDrawer() {
@@ -105,35 +135,5 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frame, fragment)
                 .commit()
-    }
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
-        when (item.itemId) {
-            R.id.nav_home -> {
-                title = "Home"
-            }
-            R.id.nav_gallery -> {
-                title = "gallery"
-            }
-            R.id.nav_slideshow -> {
-                title = "slideshow"
-            }
-            R.id.nav_manage -> {
-                title = "manage"
-                Toast.showLong(this, "Fragment not setup")
-            }
-            R.id.nav_share -> {
-                title = "share"
-                Toast.showLong(this, "Fragment not setup")
-            }
-            R.id.nav_send -> {
-                title = "send"
-                Toast.showLong(this, "Fragment not setup")
-            }
-        }
-        loadFragment(id)
-        drawer_layout.closeDrawer(GravityCompat.START)
-        return true
     }
 }
