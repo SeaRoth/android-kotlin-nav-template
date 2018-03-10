@@ -16,9 +16,9 @@ import com.searoth.template.model.LocalFeed
 import com.searoth.template.util.Toast
 import com.searoth.template.viewmodel.main.activity.MainActivityViewModel
 import com.searoth.template.viewmodel.main.activity.OnSuccess
-import com.searoth.template.viewmodel.main.fragment.HomeFragment
-import com.searoth.template.viewmodel.main.fragment.SecondFragment
-import com.searoth.template.viewmodel.main.fragment.ThirdFragment
+import com.searoth.template.view.main.fragment.HomeFragment
+import com.searoth.template.view.main.fragment.SecondFragment
+import com.searoth.template.view.main.fragment.ThirdFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 

@@ -1,4 +1,4 @@
-package com.searoth.template.viewmodel.main.fragment
+package com.searoth.template.view.main.fragment
 
 import android.content.Context
 import android.net.Uri

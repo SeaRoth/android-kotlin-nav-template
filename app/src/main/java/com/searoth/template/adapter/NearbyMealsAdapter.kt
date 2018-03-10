@@ -6,22 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.searoth.template.R
-import com.searoth.template.view.mealdetails.activity.MealDetailActivity
-import com.searoth.template.model.*
+import com.searoth.template.model.FoodItem
+import com.searoth.template.model.LocalFeed
+import com.searoth.template.view.mealDetails.activity.MealDetailActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.row_food.view.*
 
 /**
  * Created by SeaRoth_2 on 2/14/2018.
  */
-class LocalFoodAdapter(val localFeed: LocalFeed): RecyclerView.Adapter<CustomViewHolder>(){
+class LocalFoodAdapter(val localFeed: LocalFeed) : RecyclerView.Adapter<CustomViewHolder>() {
 
     override fun onBindViewHolder(holder: CustomViewHolder?, position: Int) {
         val meal = localFeed.meals.get(position)
         holder?.view?.tv_detail_name?.text = meal.name
 
         holder?.view?.tv_address?.text = meal.business.address
-        holder?.view?.tv_price?.text = "$"+meal.price.toString()
+        holder?.view?.tv_price?.text = "$" + meal.price.toString()
         holder?.view?.ratingBar?.rating = meal.rating
 
         val ivFood = holder?.view?.iv_meal
@@ -41,7 +42,7 @@ class LocalFoodAdapter(val localFeed: LocalFeed): RecyclerView.Adapter<CustomVie
     }
 }
 
-class CustomViewHolder(val view: View, var foodItem: FoodItem? = null): RecyclerView.ViewHolder(view) {
+class CustomViewHolder(val view: View, var foodItem: FoodItem? = null) : RecyclerView.ViewHolder(view) {
 
     companion object {
         val MEAL_ID_KEY = "MEAL_ID_KEY"
@@ -55,7 +56,7 @@ class CustomViewHolder(val view: View, var foodItem: FoodItem? = null): Recycler
     }
 
     init {
-        view.setOnClickListener{
+        view.setOnClickListener {
             val intent = Intent(view.context, MealDetailActivity::class.java)
 
             intent.putExtra(MEAL_ID_KEY, foodItem?.id)

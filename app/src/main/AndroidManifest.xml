@@ -24,14 +24,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.searoth.template.view.mealdetails.activity.MealDetailActivity"
+        <activity android:name=".view.mealDetails.activity.MealDetailActivity"
             android:label="Meal Detail"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.searoth.template.view.main.activity.MainActivity" />
         </activity>
-
 
     </application>
 
